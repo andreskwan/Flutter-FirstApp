@@ -23,6 +23,29 @@ class GamePage extends StatefulWidget {
   GamePage({Key key, this.title}) : super(key: key)
 
   @override
-  _GamePageState createState() => _GamePageState(); 
-  
+  _GamePageState createState() => _GamePageState();  
 }
+
+ class _GamePageState extends State<GamePage> {
+   @override
+   Widget build(BuildContext context) {
+     return Scaffold(
+       body: Center(
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: <Widget>[
+             Text(
+               'Welcome to my first app!',
+               style:
+                   TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
+             ),
+             FlatButton(
+               child: Text('Hit Me!', style: TextStyle(color: Colors.blue)),
+               onPressed: () {},
+             ),
+           ],
+         ),
+       ),
+     );
+   }
+ }
