@@ -52,17 +52,6 @@ class _GamePageState extends State<GamePage> {
                 this._showAlert(context);
               },
             ),
-            FlatButton(
-              child: Text('Knock, Knock',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 20,
-                  )),
-              onPressed: () {
-                // this._alertIsVisible = true;
-                this._showWhoseThere(context);
-              },
-            ),
           ],
         ),
       ),
@@ -83,25 +72,6 @@ class _GamePageState extends State<GamePage> {
           return AlertDialog(
             title: Text("Hello there!"),
             content: Text("This is my first pop-up"),
-            actions: <Widget>[okButton],
-          );
-        });
-  }
-
-  void _showWhoseThere(BuildContext context) {
-    Widget okButton = FlatButton(
-        child: Text("Awesome!"),
-        onPressed: () {
-          Navigator.of(context).pop();
-          // this._alertIsVisible = false;
-          // print("Awesome pressed! $_alertIsVisible");
-        });
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Whose there!"),
-            content: Text("This is my second pop-up"),
             actions: <Widget>[okButton],
           );
         });
